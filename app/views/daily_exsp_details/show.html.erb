@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @daily_exsp_detail.user_id %>
+</p>
+
+<p>
+  <strong>Daily exspenses:</strong>
+  <%= @daily_exsp_detail.daily_exspenses_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @daily_exsp_detail.amount %>
+</p>
+
+<p>
+  <strong>Is paid:</strong>
+  <%= @daily_exsp_detail.is_paid %>
+</p>
+
+<%= link_to 'Edit', edit_daily_exsp_detail_path(@daily_exsp_detail) %> |
+<%= link_to 'Back', daily_exsp_details_path %>

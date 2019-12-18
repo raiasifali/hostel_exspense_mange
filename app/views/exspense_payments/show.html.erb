@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exspense_payment.user_id %>
+</p>
+
+<p>
+  <strong>Paid amount:</strong>
+  <%= @exspense_payment.paid_amount %>
+</p>
+
+<%= link_to 'Edit', edit_exspense_payment_path(@exspense_payment) %> |
+<%= link_to 'Back', exspense_payments_path %>

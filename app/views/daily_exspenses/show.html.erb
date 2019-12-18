@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @daily_exspense.description %>
+</p>
+
+<p>
+  <strong>Totalamount:</strong>
+  <%= @daily_exspense.totalamount %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @daily_exspense.time %>
+</p>
+
+<p>
+  <strong>Creaded by:</strong>
+  <%= @daily_exspense.creaded_by %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @daily_exspense.status %>
+</p>
+
+<%= link_to 'Edit', edit_daily_exspense_path(@daily_exspense) %> |
+<%= link_to 'Back', daily_exspenses_path %>

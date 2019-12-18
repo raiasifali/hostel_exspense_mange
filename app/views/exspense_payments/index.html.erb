@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Exspense Payments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Paid amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exspense_payments.each do |exspense_payment| %>
+      <tr>
+        <td><%= exspense_payment.user_id %></td>
+        <td><%= exspense_payment.paid_amount %></td>
+        <td><%= link_to 'Show', exspense_payment %></td>
+        <td><%= link_to 'Edit', edit_exspense_payment_path(exspense_payment) %></td>
+        <td><%= link_to 'Destroy', exspense_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exspense Payment', new_exspense_payment_path %>

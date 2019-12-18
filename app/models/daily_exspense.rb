@@ -1,0 +1,2 @@
+class DailyExspense < ApplicationRecord
+end
