@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :exspense_payments
   resources :daily_exsp_details
   resources :daily_exspenses

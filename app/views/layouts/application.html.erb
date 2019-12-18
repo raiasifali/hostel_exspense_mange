@@ -17,8 +17,8 @@
 
 <!-- Navigation -->
   <nav class="navbar  static-top" style="background-color: #616b64;">
-    <div class="container">
-      <a class="navbar-brand" href="#" style="color: #56BAED;"><b>H E M S</b> </a>
+    <div class="container"><b>
+      <%= link_to "H E M S", home_index_path,class:'navbar-brand',style:'color:white;'%></b>
       <%if hostel_signed_in?%>
           <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:"btn btn-primary"%>
       <%else%>
