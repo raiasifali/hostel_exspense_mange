@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "Show User"%>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<table class="table">
+			<tr>
+				<td>Name</td>
+				<td> <%= @user.name %></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td> <%= @user.email %></td>
+			</tr>
+		</table>
+      <%= link_to 'Edit', edit_user_path(@user),class:'btn btn-info' %> |
+      <%= link_to 'Back', users_path,class:"btn btn-primary" %>
+	</div>
+	<div class="col-md-2"></div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
 
-<p>
-  <strong>Blancehostel:</strong>
-  <%= @user.blancehostel_id %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
