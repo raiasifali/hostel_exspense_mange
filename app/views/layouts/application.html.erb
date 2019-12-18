@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hostelizer</title>
+    <title>Hostel Managment systems</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,9 +16,9 @@
   <body>
 
 <!-- Navigation -->
-  <nav class="navbar  static-top" style="background-color: #BC7070;">
+  <nav class="navbar  static-top" style="background-color: #616b64;">
     <div class="container">
-      <a class="navbar-brand" href="#" style="color: #56BAED;color:blue;"><b>H E M S</b> </a>
+      <a class="navbar-brand" href="#" style="color: #56BAED;"><b>H E M S</b> </a>
       <%if hostel_signed_in?%>
           <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:"btn btn-primary"%>
       <%else%>
@@ -35,7 +35,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-         <h1 class="display-5 font-weight-bold" ><%= yield :page_title%></h1>
+         <h1 class="display-5 font-weight-bold"  ><%= yield :page_title%></h1>
 
         </div>
        
@@ -54,7 +54,7 @@
     <%= yield %>
 <br>
 <!-- Footer -->
-  <footer class="footer " style="padding: 50px;background-color: #C3A4A4;" >
+  <footer class="footer " style="padding: 50px;background-color: #616b64;color: white;" >
     <div class="container">
       <div class="row">
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
@@ -75,7 +75,7 @@
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+          <p class="" style="color:white;">&copy; Your Website 2020. All Rights Reserved.</p>
         </div>
         
       </div>

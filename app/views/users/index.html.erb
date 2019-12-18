@@ -7,7 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-     
+      <th>Blance</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,6 +17,7 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
+        <td><%= user.Blance %></td>
         <td><%= link_to 'Show', user , class:'btn btn-success'%></td>
         <td><%= link_to 'Edit', edit_user_path(user) , class:'btn btn-info'%></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , class:'btn btn-danger'%></td>
