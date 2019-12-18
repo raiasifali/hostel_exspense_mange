@@ -1,14 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "Exspense Payment Show"  %>
+<table class="table">
+	<tr>
+		<td>User</td>
+		<td><%= @exspense_payment.user_id %></td>
+	</tr>
+	<tr>
+		<td>Paid Amount</td>
+		<td><%= @exspense_payment.paid_amount %></td>
+	</tr>
+</table>
 
-<p>
-  <strong>User:</strong>
-  <%= @exspense_payment.user_id %>
-</p>
 
-<p>
-  <strong>Paid amount:</strong>
-  <%= @exspense_payment.paid_amount %>
-</p>
-
-<%= link_to 'Edit', edit_exspense_payment_path(@exspense_payment) %> |
-<%= link_to 'Back', exspense_payments_path %>
+<%= link_to 'Edit', edit_exspense_payment_path(@exspense_payment) ,class:'btn btn-info'%> |
+<%= link_to 'Back', exspense_payments_path ,class:'btn btn-success'%>

@@ -1,24 +1,24 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, " Daily Exsp Detail"  %>
 
-<p>
-  <strong>User:</strong>
-  <%= @daily_exsp_detail.user_id %>
-</p>
+<table>
+	<tr>
+		<td>User</td>
+		<td><%= @daily_exsp_detail.user_id %></td>
+	</tr>
+	<tr>
+		<td>Daily exspenses</td>
+		<td><%= @daily_exsp_detail.daily_exspenses_id %></td>
+	</tr>
+	<tr>
+		<td>Amount</td>
+		<td><%= @daily_exsp_detail.amount %></td>
+	</tr>
+	<tr>
+		<td>Is Paid</td>
+		<td> <%= @daily_exsp_detail.is_paid %></td>
+	</tr>
+</table>
 
-<p>
-  <strong>Daily exspenses:</strong>
-  <%= @daily_exsp_detail.daily_exspenses_id %>
-</p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @daily_exsp_detail.amount %>
-</p>
-
-<p>
-  <strong>Is paid:</strong>
-  <%= @daily_exsp_detail.is_paid %>
-</p>
-
-<%= link_to 'Edit', edit_daily_exsp_detail_path(@daily_exsp_detail) %> |
-<%= link_to 'Back', daily_exsp_details_path %>
+<%= link_to 'Edit', edit_daily_exsp_detail_path(@daily_exsp_detail),class:'btn btn-info' %> |
+<%= link_to 'Back', daily_exsp_details_path ,class:'btn btn-success'%>

@@ -11,27 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+ 
 
-  <div class="field">
-    <%= form.label :daily_exspenses_id %>
-    <%= form.text_field :daily_exspenses_id %>
-  </div>
+<table class="table">
+  <tr>
+    <td> <%= form.label :user_id %></td>
+    <td><%= form.number_field :user_id , class:'form-control'%></td>
+  </tr>
+  <tr>
+    <td><%= form.label :daily_exspenses_id %></td>
+    <td><%= form.number_field :daily_exspenses_id , class:'form-control'%></td>
+  </tr>
+  <tr>
+    <td><%= form.label :amount %></td>
+    <td><%= form.number_field :amount,class:'form-control' %></td>
+  </tr>
+  <tr>
+    <td> <%= form.label :is_paid %></td>
+    <td>  <%= form.check_box :is_paid ,class:'form-control'%></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="btn btn-success"><%= form.submit %></td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
-  </div>
+</table>
 
-  <div class="field">
-    <%= form.label :is_paid %>
-    <%= form.check_box :is_paid %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

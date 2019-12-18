@@ -1,5 +1,5 @@
-<h1>New Daily Exspense</h1>
+<% content_for :page_title, "New Daily Exspense"  %>
 
 <%= render 'form', daily_exspense: @daily_exspense %>
 
-<%= link_to 'Back', daily_exspenses_path %>
+<%= link_to 'Back', daily_exspenses_path ,class:"btn btn-success"%>

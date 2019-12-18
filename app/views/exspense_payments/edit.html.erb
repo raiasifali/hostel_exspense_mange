@@ -1,6 +1,6 @@
-<h1>Editing Exspense Payment</h1>
+<% content_for :page_title, "Editing Exspense Payment"  %>
 
 <%= render 'form', exspense_payment: @exspense_payment %>
 
-<%= link_to 'Show', @exspense_payment %> |
-<%= link_to 'Back', exspense_payments_path %>
+<%= link_to 'Show', @exspense_payment ,class:'btn btn-success'%> |
+<%= link_to 'Back', exspense_payments_path ,class:'btn btn-primary'%>

@@ -1,29 +1,26 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "Show Details"  %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @daily_exspense.description %>
-</p>
-
-<p>
-  <strong>Totalamount:</strong>
-  <%= @daily_exspense.totalamount %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @daily_exspense.time %>
-</p>
-
-<p>
-  <strong>Creaded by:</strong>
-  <%= @daily_exspense.creaded_by %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @daily_exspense.status %>
-</p>
-
-<%= link_to 'Edit', edit_daily_exspense_path(@daily_exspense) %> |
-<%= link_to 'Back', daily_exspenses_path %>
+<table class="table">
+  <tr>
+    <td>Description</td>
+    <td><%= @daily_exspense.description %></td>
+  </tr>
+  <tr>
+    <td>Totalamount</td>
+    <td><%= @daily_exspense.totalamount %></td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>  <%= @daily_exspense.time %></td>
+  </tr>
+  <tr>
+    <td>Creaded by</td>
+    <td><%= @daily_exspense.time %></td>
+  </tr>  
+  <tr>
+    <td>Status</td>
+    <td> <%= @daily_exspense.status %></td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_daily_exspense_path(@daily_exspense), class:'btn btn-info' %> |
+<%= link_to 'Back', daily_exspenses_path,class:'btn btn-success' %>

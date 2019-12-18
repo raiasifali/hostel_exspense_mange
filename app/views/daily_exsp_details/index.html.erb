@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "  Daily Exsp detail list"  %>
 
-<h1>Daily Exsp Details</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>User</th>
@@ -20,9 +19,9 @@
         <td><%= daily_exsp_detail.daily_exspenses_id %></td>
         <td><%= daily_exsp_detail.amount %></td>
         <td><%= daily_exsp_detail.is_paid %></td>
-        <td><%= link_to 'Show', daily_exsp_detail %></td>
-        <td><%= link_to 'Edit', edit_daily_exsp_detail_path(daily_exsp_detail) %></td>
-        <td><%= link_to 'Destroy', daily_exsp_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', daily_exsp_detail,class:'btn btn-info' %></td>
+        <td><%= link_to 'Edit', edit_daily_exsp_detail_path(daily_exsp_detail),class:'btn btn-success' %></td>
+        <td><%= link_to 'Destroy', daily_exsp_detail, method: :delete, data: { confirm: 'Are you sure?' } ,class:'btn btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Daily Exsp Detail', new_daily_exsp_detail_path %>
+<%= link_to 'New Daily Exsp Detail', new_daily_exsp_detail_path ,class:'btn btn-success'%>

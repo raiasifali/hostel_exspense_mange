@@ -10,18 +10,18 @@
       </ul>
     </div>
   <% end %>
+   <table class="table">
+     <tr>
+       <td><%= form.label :user_id %></td>
+       <td> <%= form.text_field :user_id %></td>
+     </tr>
+     <tr>
+       <td> <%= form.label :paid_amount %></td>
+       <td><%= form.number_field :paid_amount %></td>
+     </tr>
+     <tr>
+       <td colspan="2" class="btn btn-success">  <%= form.submit %></td>
+     </tr>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :paid_amount %>
-    <%= form.number_field :paid_amount %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+   </table>
 <% end %>

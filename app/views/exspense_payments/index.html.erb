@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "Exspense Payments"  %>
 
-<h1>Exspense Payments</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>User</th>
@@ -26,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Exspense Payment', new_exspense_payment_path %>
+<%= link_to 'New Exspense Payment', new_exspense_payment_path ,class:'btn btn-info'%>

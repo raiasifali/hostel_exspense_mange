@@ -1,6 +1,6 @@
-<h1>Editing Daily Exsp Detail</h1>
+<% content_for :page_title, " Edit Daily Exsp Detail"  %>
 
 <%= render 'form', daily_exsp_detail: @daily_exsp_detail %>
 
-<%= link_to 'Show', @daily_exsp_detail %> |
-<%= link_to 'Back', daily_exsp_details_path %>
+<%= link_to 'Show', @daily_exsp_detail,class:'btn btn-info' %> |
+<%= link_to 'Back', daily_exsp_details_path ,class:'btn btn-success'%>
