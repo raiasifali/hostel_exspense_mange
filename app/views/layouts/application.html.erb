@@ -9,28 +9,51 @@
 
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<script src="https://kit.fontawesome.com/8d981fc222.js" crossorigin="anonymous"></script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
 <!-- Navigation -->
-  <nav class="navbar  static-top" style="background-color: #616b64;">
-    <div class="container"><b>
-      <%= link_to "H E M S", home_index_path,class:'navbar-brand',style:'color:white;'%></b>
-      <%if hostel_signed_in?%>
-          <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:"btn btn-primary"%>
+ 
+<nav class="navbar navbar-expand-lg " style="background-color: #616b64;"><b>
+ <%= link_to "H E M S", home_index_path,class:'navbar-brand',style:'color:white;'%></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="text-decoration: none;"> <span class="sr-only">(current)</span></a>
+      </li>
+
+       <%if hostel_signed_in?%>
+             <li class="nav-item dropdown" style="float: right;margin-left:1000px;">
+            <a class=" dropdown-toggle" href="#" id="navbarDropdown"  data-toggle="dropdown" style="text-decoration: none;color:white;">
+               <i class="fas fa-user-circle"></i> Admin
+            </a>
+            <div class="dropdown-menu" >
+              
+              <%= link_to "Edit Admin Account", edit_hostel_registration_path,class:'dropdown-item'%>
+              
+              <div class="dropdown-divider"></div>
+              <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:'dropdown-item'%>
+            </div>
+          </li>
       <%else%>
         <%= link_to "Log in", new_hostel_session_path, class:"btn btn-primary"%>
       <%end%>
-       
-    </div>
-  </nav>
+    </ul>
+  </div>
+</nav>
+
+
 <%if hostel_signed_in?%>
          
   <!-- Masthead -->
-  <header class="masthead text-white text-center" style="background-color: #505029;padding:  100px;">
+  <header class="masthead text-white text-center" style="background-color: #505029;padding:  30px;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
