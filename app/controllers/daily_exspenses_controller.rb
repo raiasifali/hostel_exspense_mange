@@ -1,4 +1,5 @@
 class DailyExspensesController < ApplicationController
+ before_action :authenticate_hostel!
   before_action :set_daily_exspense, only: [:show, :edit, :update, :destroy]
 
   # GET /daily_exspenses

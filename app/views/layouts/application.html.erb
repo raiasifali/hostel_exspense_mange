@@ -17,38 +17,44 @@
 
 <!-- Navigation -->
  
-<nav class="navbar navbar-expand-lg " style="background-color: #84CECE;"><b>
+
+<nav class="navbar navbar-expand-lg "style="background-color: #84CECE;">
+ <b>
  <%= link_to "H E M S", home_index_path,class:'navbar-brand',style:'color:white;'%></b>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" style="text-decoration: none;"> <span class="sr-only">(current)</span></a>
-      </li>
-
-       <%if hostel_signed_in?%>
-             <li class="nav-item dropdown" style="float: right;margin-left:1000px;">
-            <a class=" dropdown-toggle" href="#" id="navbarDropdown"  data-toggle="dropdown" style="text-decoration: none;color:white;">
-               <i class="fas fa-user-circle"></i> Admin
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left:500px;">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <%= link_to 'User list', users_path,class:"nav-link",style:"color: white;font-weight:bold;" %>
+        </li>
+        <li class="nav-item">
+         <%= link_to 'Daily Exes Details', daily_exs_details_path ,class:'nav-link',style:"color: white;font-weight:bold;"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Daily Exsepense', daily_exspenses_path ,class:'nav-link',style:"color: white;font-weight:bold;"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Exsepense Payment', exspense_payments_path,class:'nav-link' ,style:"color: white;font-weight:bold;"%>
+        </li>
+        <%if hostel_signed_in?%>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;color:white;">
+             <i class="fas fa-user-circle"></i> Admin
             </a>
-            <div class="dropdown-menu" >
-              
-              <%= link_to "Edit Admin Account", edit_hostel_registration_path,class:'dropdown-item'%>
-              
-              <div class="dropdown-divider"></div>
-              <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:'dropdown-item'%>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <%= link_to "Edit Admin Account", edit_hostel_registration_path,class:'dropdown-item'%><div class="dropdown-divider"></div>
+                  <%= link_to "Log Out", destroy_hostel_session_path, method: :delete,class:'dropdown-item'%>
+                </div>
             </div>
           </li>
       <%else%>
-        <%= link_to "Log in", new_hostel_session_path, class:"btn btn-primary",style:'margin-left:1000px;'%>
-      <%end%>
-    </ul>
+         <%= link_to "Admin Login", new_hostel_session_path, class:"btn btn-primary",style:'margin-left:1000px;'%>
+        <%end%>
+      </ul>
   </div>
 </nav>
-
 
 <%if hostel_signed_in?%>
          
@@ -74,10 +80,10 @@
 
 
 <br>
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8"><%= yield %></div>
-  <div class="col-md-2"></div>
+<div class="row" >
+  <div class="col-md-1"></div>
+  <div class="col-md-10"><%= yield %></div>
+  <div class="col-md-1"></div>
 </div>
     
 <br>

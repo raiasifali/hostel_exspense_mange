@@ -1,4 +1,6 @@
 class DailyExsDetailsController < ApplicationController
+  before_action :authenticate_hostel!
+  
   before_action :set_daily_exs_detail, only: [:show, :edit, :update, :destroy]
 
   # GET /daily_exs_details
