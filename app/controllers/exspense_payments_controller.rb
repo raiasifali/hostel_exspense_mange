@@ -14,6 +14,7 @@ class ExspensePaymentsController < ApplicationController
 
   # GET /exspense_payments/new
   def new
+    @user=User.all
     @exspense_payment = ExspensePayment.new
   end
 

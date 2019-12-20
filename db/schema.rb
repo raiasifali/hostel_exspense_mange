@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_20_061826) do
+ActiveRecord::Schema.define(version: 2019_12_20_063904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2019_12_20_061826) do
     t.string "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "daily_exspense_id"
+    t.index ["daily_exspense_id"], name: "index_daily_exs_details_on_daily_exspense_id"
     t.index ["user_id"], name: "index_daily_exs_details_on_user_id"
   end
 
@@ -63,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_12_20_061826) do
     t.integer "Blance"
   end
 
+  add_foreign_key "daily_exs_details", "daily_exspenses"
   add_foreign_key "daily_exs_details", "users"
   add_foreign_key "exspense_payments", "users"
 end

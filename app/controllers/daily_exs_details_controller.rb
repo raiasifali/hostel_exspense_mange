@@ -14,6 +14,8 @@ class DailyExsDetailsController < ApplicationController
 
   # GET /daily_exs_details/new
   def new
+    @user=User.all
+    @daily_exs=DailyExspense.all
     @daily_exs_detail = DailyExsDetail.new
   end
 
@@ -69,6 +71,6 @@ class DailyExsDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def daily_exs_detail_params
-      params.require(:daily_exs_detail).permit(:user_id, :amount)
+      params.require(:daily_exs_detail).permit(:user_id, :daily_exspense_id,:amount)
     end
 end

@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, "Daily Expenses Show"  %>
+<table class="table">
+	<tr>
+		<td>User</td>
+		<td> <%= @daily_exs_detail.user_id %></td>
+	</tr>
+	<tr>
+		<td>Daily Expenses id</td>
+		<td><%= @daily_exs_detail.daily_exspense_id %></td>
+	</tr>
 
-<p>
-  <strong>User:</strong>
-  <%= @daily_exs_detail.user_id %>
-</p>
+	<tr>
+		<td>Amount</td>
+		<td><%= @daily_exs_detail.amount %></td>
+	</tr>
+</table>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @daily_exs_detail.amount %>
-</p>
-
-<%= link_to 'Edit', edit_daily_exs_detail_path(@daily_exs_detail) %> |
-<%= link_to 'Back', daily_exs_details_path %>
+<%= link_to 'Edit', edit_daily_exs_detail_path(@daily_exs_detail) ,class:'btn btn-success'%> |
+<%= link_to 'Back', daily_exs_details_path ,class:'btn btn-info'%>
