@@ -10,20 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_18_160720) do
+ActiveRecord::Schema.define(version: 2019_12_20_061826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "daily_exsp_details", force: :cascade do |t|
+  create_table "daily_exs_details", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "daily_exspenses_id", null: false
-    t.integer "amount"
-    t.boolean "is_paid"
+    t.string "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["daily_exspenses_id"], name: "index_daily_exsp_details_on_daily_exspenses_id"
-    t.index ["user_id"], name: "index_daily_exsp_details_on_user_id"
+    t.index ["user_id"], name: "index_daily_exs_details_on_user_id"
   end
 
   create_table "daily_exspenses", force: :cascade do |t|
@@ -66,7 +63,6 @@ ActiveRecord::Schema.define(version: 2019_12_18_160720) do
     t.integer "Blance"
   end
 
-  add_foreign_key "daily_exsp_details", "daily_exspenses", column: "daily_exspenses_id"
-  add_foreign_key "daily_exsp_details", "users"
+  add_foreign_key "daily_exs_details", "users"
   add_foreign_key "exspense_payments", "users"
 end

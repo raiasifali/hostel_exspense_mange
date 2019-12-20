@@ -1,0 +1,2 @@
+module DailyExsDetailsHelper
+end
