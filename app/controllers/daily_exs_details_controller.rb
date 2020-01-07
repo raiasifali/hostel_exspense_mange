@@ -7,6 +7,7 @@ class DailyExsDetailsController < ApplicationController
   # GET /daily_exs_details.json
   def index
     @daily_exs_details = DailyExsDetail.all
+    @user=User.all
   end
 
   # GET /daily_exs_details/1

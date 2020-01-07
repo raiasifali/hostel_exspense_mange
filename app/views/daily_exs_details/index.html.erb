@@ -12,7 +12,8 @@
   <tbody>
     <% @daily_exs_details.each do |daily_exs_detail| %>
       <tr>
-        <td><%= daily_exs_detail.user_id %></td>
+        <% @userr=@user.find(daily_exs_detail.user_id)%>
+        <td><%=  @userr.name%></td>
         <td><%= daily_exs_detail.daily_exspense_id %></td>
         <td><%= daily_exs_detail.amount %></td>
         <td><%= link_to 'Show', daily_exs_detail ,class:'btn btn-success'%></td>
